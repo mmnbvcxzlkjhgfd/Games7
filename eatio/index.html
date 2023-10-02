@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+   
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Eat.io | lioxryt</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="zombies11.css" />
+    <script src="UnityProgress.js"></script>
+    <script src="UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "eat-io-1.json",
+        { onProgress: UnityProgress }
+      );
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+
+      <div id="gameContainer" ></div>
+      <script>
+        var he = window.innerHeight
+        var wi = window.innerWidth
+        document.getElementById('gameContainer').style.width = wi - 15 + 'px'
+        document.getElementById('gameContainer').style.height = he - 25 + 'px'
+
+      </script>
+      <div style="display: none;" class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Eat.io</div>
+      </div>
+    </div>
+    <script src="/html/settings/js/index.js"></script>
+  </body>
+</html>
