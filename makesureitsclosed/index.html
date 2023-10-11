@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Make Sure It's Closed</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/MSIC-WEBGL.json");
+    </script>
+  </head>
+  <body>
+    <div id="gameContainer" style=" margin: auto"></div>
+    <script>
+      var c = document.getElementById('gameContainer')
+      c.style.width = window.innerWidth - 20 + 'px'
+      c.style.height = window.innerHeight - 15 + 'px'
+    </script>
+  </body>
+</html>
